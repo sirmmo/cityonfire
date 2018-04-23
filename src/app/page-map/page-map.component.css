@@ -1,0 +1,13 @@
+mgl-map {
+    height: 400px;
+    width: 100%;
+}
+
+a>h1,a>h2,a>h3,a>h4{
+    color:white;
+    text-decoration: none;  
+}
+
+a{
+    text-decoration: none;
+}

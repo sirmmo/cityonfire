@@ -1,0 +1,27 @@
+<div class="slidecontainer" [ngStyle]="{'height.px':height}">
+    <ul class="slides">
+        <li [ngClass]="{'hidden':0!=active_idx}" style="height: 450px; background-image:url(assets/Imma_home.001.png);" >
+         <div class="banner-container" style="height: 450px;">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="heading text-center" style="margin-top: 70px">
+                 	<strong id="first">Create, enhance and share the world around you.</strong>        
+                	<div style="background-color:rgba(255,255,255,0.85);"><img src="/assets/LogocityOS_buono.png" style="width: 500px;"></div>
+                	<strong>Augmented maps for collaborative storytelling</strong>
+                </div>          
+              </div>
+            </div>
+          </div>
+          </li>
+        <li *ngFor="let slide of slides" [ngStyle]="{'height.px':height, 'background-image':'url('+slide.url+')'}" class="slide" [ngClass]="{'hidden':slide.idx!=active_idx}" [attr.ident]="slide.idx"  [portalHost]="_contentPortal">
+                <h1>{{slide.title}}</h1>
+                <p>{{slide.text}}</p>
+        </li>   
+    </ul>
+    <div class="pager">
+        <i class="fa fa-fw fa-chevron-left control-prev" (click)="go(-1)"></i>
+        <i class="fa fa-fw fa-circle" [ngClass]="{'active':0 == active_idx}" (click)="setSlide(0)"></i>
+        <i class="fa fa-fw fa-circle" *ngFor="let slide of slides" [ngClass]="{'active':slide.idx == active_idx}" (click)="setSlide(slide.idx)"></i>
+        <i class="fa fa-fw fa-chevron-right control-prev" (click)="go(+1)"></i>
+    </div>
+</div>

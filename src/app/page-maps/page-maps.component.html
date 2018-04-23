@@ -1,0 +1,8 @@
+<mat-grid-list cols="5">
+  <mat-grid-tile *ngFor="let item of items | async">
+    <img [src]="cos.sanitizeUrl(item.background.image)">
+      <mat-grid-tile-footer><a href="#/maps/{{item.slug}}">{{ item.name }}</a></mat-grid-tile-footer>
+  </mat-grid-tile>
+
+</mat-grid-list>
+

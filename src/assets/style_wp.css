@@ -1,0 +1,49 @@
+/*
+Theme Name: Javo Directory
+Theme URI: http://javothemes.com/directory
+Author: Javo
+Author URI: http://javothemes.com
+Version: 2.2.3
+Description: Javo Powerfull Directory Wordpress Themes.
+Tags: one-column, two-columns, left-sidebar,right-sidebar, custom-header, custom-menu, editor-style, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/* @charset "utf-8";
+@import url("//fonts.googleapis.com/css?family=Raleway:100, 400,300,600,700,500,200|-1:200,300,400,600,800&amp;subset=latin,latin-ext");
+@import url("//fonts.googleapis.com/css?family=Oswald:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic");
+@import url("assets/bootstrap/bootstrap.min.css");
+@import url("assets/css/font-awesome.css");
+@import url('assets/css/common.css'); */
+
+html, body{ font:13px/26px 'Raleway'; height:100%; }
+body{ overflow-y:scroll !important; }
+img{ border:none; }
+a{ text-decoration:none; color:#333;}
+a:hover{ text-decoration:none; color:#a1a1a1; }
+html, body, h1, h2, h3, h4, h5, h6 { color:#646464;}
+.wpb_row:after{ content:' '; display:table; clear:both; } /*  Compatibility Visual Composer ver4.3.2 */
+
+
+/** widget top right **/
+.widget_top_menu_wrap{ display:block; margin:13px 0; }
+.widget_top_menu_wrap li {
+	display:inline-block;
+	line-height:20px;
+	list-style-type: none;
+	margin-right:5px;
+	font-weight: 600;
+	font-family:'Open Sans', sans-serif;
+}
+.widget_top_menu_wrap .right-menu-wrap i {font-size:14px;}
+.widget_top_menu button.right-menu {border:0; background:none;}
+
+/** widget right menu **/
+.right_menu_inner {background:red;}
+.right_menu_inner .navmenu {background:#222; padding:30px 0 0 20px; list-style-type: none;}
+.right_menu_inner .navmenu a {color:#fff;}
+.right_menu_inner .navmenu-default, .right_menu_inner .navbar-default .right_menu_inner .navbar-offcanvas {border-color:none;}
+
+.javo_somw_panel.row.mobile-display-panel form,
+.javo_somw_panel.row.mobile-display-panel .javo_somw_list_inner{ padding:0 15px; }

@@ -1,0 +1,20 @@
+<h2><a href="#/maps">Maps</a> > {{mapItem?.name}}</h2>
+
+<mgl-map *ngIf="mapItem" [style]="'mapbox://styles/mapbox/streets-v9'" [zoom]="mapItem?.zoom" [center]="mapItem?.center.coordinates">
+<mgl-geojson-source id="elements" [data]="data" [cluster]="true" [clusterMaxZoom]="14" [clusterRadius]="50">
+</mgl-geojson-source>
+<mgl-layer id="route" source="elements" type="circle" [paint]="{ 'circle-radius': 10, 'circle-color': '#3887be' }">
+</mgl-layer>
+</mgl-map>
+
+<mat-grid-list cols="3">
+  <mat-grid-tile flexLayout *ngFor="let item of items | async">
+    <img [src]="cos.fixImage(cos.resizeImage(item?.media))" fxFlex>
+    <mat-grid-tile-header>
+      <a href="#/maps/{{map}}/{{item?.slug}}"><h2>{{ item?.name }}</h2></a>
+      <a href="#/users/{{item?.author.username}}"><h4>{{item?.author.username}}</h4></a>
+    </mat-grid-tile-header>
+  </mat-grid-tile>
+</mat-grid-list>
+
+

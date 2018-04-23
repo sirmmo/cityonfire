@@ -1,0 +1,12 @@
+<h2><a href="#/maps">Maps</a> > <a href="#/maps/{{mapItem?.slug}}">{{mapItem?.name}}</a> > {{item?.name}}</h2>
+<div *ngFor="let item of items | async">
+  <h3>{{item.author|json}}</h3>
+  <div *ngIf="item.media[0].type == 'img'">
+    <img src="{{item.media[0].s3_file}}" width="400">
+  </div>
+  <div *ngIf="item.media[0].type == 'video'">
+    <video controls width="400">
+      <source src="{{item.media[0].s3_file}}" />
+    </video>
+  </div>
+</div>
